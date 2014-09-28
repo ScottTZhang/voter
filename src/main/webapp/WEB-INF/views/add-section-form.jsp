@@ -35,17 +35,17 @@
                 <label for="forDescription" class="col-sm-2 control-label">Description</label>
                 <div class="col-sm-10">
                     <form:textarea path="description" class="form-control" placeholder="put some description" id="forDescription" rows="3" />
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Add a section</button>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Add a section</button>
+                    </div>
                 </div>
-            </div>
-        </form:form>
+            </form:form>
 
-        <p><a href="${pageContext.request.contextPath}/sections">Home page</a></p>
+            <p><a href="${pageContext.request.contextPath}/sections">Home page</a></p>
+        </div>
     </div>
-</div>
-</body>
-</html>
+    </body>
+    </html>
