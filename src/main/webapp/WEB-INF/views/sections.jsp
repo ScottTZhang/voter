@@ -10,12 +10,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
-
 <title>voter sections</title>
-
 <!-- Bootstrap core CSS -->
 <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Custom styles for this template -->
 <link href="starter-template.css" rel="stylesheet">
 
@@ -78,13 +75,14 @@
 </nav>
 <div class="container">
     <div class="row">
-
         <div class="col-lg-12">
             <h1>List of All Sections</h1>
             <p>Here you can see the list of the teams, edit them, remove or update.</p>
+            <c:if test="${message != null}">
             <div class="alert alert-success" role="alert">
                 ${message}
             </div>
+            </c:if>
             <p>
             <a href = "${pageContext.request.contextPath}/section/add" class="pull-right btn btn-primary">add a section</a><br>
             </p>

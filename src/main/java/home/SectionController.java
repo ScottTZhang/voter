@@ -51,8 +51,6 @@ public class SectionController {
             sectionService.addSection(section);
             String msg = "Section was successfully added.";
             mav.addObject("message", msg);
-            //List<Section> sections = sectionService.findAll();
-            //mav.addObject("sections", sections);
             return mav;
         }
 
@@ -70,19 +68,15 @@ public class SectionController {
             sectionService.updateSection(section);
             String msg = "Section was successfully editted.";
             mav.addObject("message", msg);
-            //List<Section> sections = sectionService.findAll();
-            //mav.addObject("sections", sections);
             return mav;
         }
 
     @RequestMapping(value = "section/delete/{id}", method = RequestMethod.GET)
         public ModelAndView delete(@PathVariable long id){
-            ModelAndView mav = new ModelAndView("sections");
+            ModelAndView mav = new ModelAndView("redirect:/sections");
             sectionService.deleteSection(id);
             String msg = "Section was successfully deleted.";
             mav.addObject("message", msg);
-            List<Section> sections = sectionService.findAll();
-            mav.addObject("sections", sections);
             return mav;
         }
 }
